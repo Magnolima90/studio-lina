@@ -125,7 +125,7 @@
 
   // ---------- Animações ao rolar ----------
   function wireRevealOnScroll() {
-    var revealEls = document.querySelectorAll(".reveal");
+    var revealEls = document.querySelectorAll(".reveal, .blur-reveal");
     if (!revealEls.length) return;
     if (!("IntersectionObserver" in window)) {
       revealEls.forEach(function (el) { el.classList.add("in-view"); });
