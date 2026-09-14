@@ -46,15 +46,15 @@
 
 html[data-theme="dark"]{
   --bg:              #14110f;
-  --bg-alt:          #1c1712;
-  --surface:         #201b16;
+  --bg-alt:          #1e1913;
+  --surface:         #221d17;
   --text:            #f4eee3;
   --text-soft:       #d8cfc0;
-  --text-muted:      #b0a696;
-  --border:          rgba(244,238,227,.12);
+  --text-muted:      #b8ad9e;
+  --border:          rgba(244,238,227,.18);
   --header-scroll-bg: rgba(18,15,12,.86);
   --accent-text:     #e0b578;
-  --insta-bg: linear-gradient(135deg,#241d15,#2a2018 45%,#241a10);
+  --insta-bg: linear-gradient(135deg,#2a2118,#302419 45%,#2a1c10);
 }
 
 *,*::before,*::after{ box-sizing:border-box; }
@@ -511,7 +511,13 @@ body.nav-open .nav-overlay{ opacity:1; pointer-events:auto; }
 .map-frame{
   border-radius:var(--radius-md); overflow:hidden; border:1px solid var(--border); aspect-ratio:16/10;
 }
-.map-frame iframe{ width:100%; height:100%; border:0; filter:grayscale(.15) contrast(1.02); }
+.map-frame iframe{
+  width:100%; height:100%; border:0; filter:grayscale(.15) contrast(1.02);
+  transition:filter .4s var(--ease);
+}
+html[data-theme="dark"] .map-frame iframe{
+  filter:grayscale(.2) invert(90%) hue-rotate(180deg) brightness(.87) contrast(.92);
+}
 .info-card .btn{ align-self:flex-start; }
 
 /* ===========================================================
@@ -596,6 +602,17 @@ body.nav-open .nav-overlay{ opacity:1; pointer-events:auto; }
 @keyframes pulseWa{
   0%,100%{ box-shadow:0 14px 30px -10px rgba(37,211,102,.6); }
   50%{ box-shadow:0 14px 30px -6px rgba(37,211,102,.85), 0 0 0 10px rgba(37,211,102,.12); }
+}
+
+/* Mais contraste de profundidade nos cartões quando o modo escuro está ativo */
+html[data-theme="dark"] .service-card,
+html[data-theme="dark"] .feature-card,
+html[data-theme="dark"] .about-stats div,
+html[data-theme="dark"] .info-card,
+html[data-theme="dark"] .insta-tile,
+html[data-theme="dark"] .tab-btn,
+html[data-theme="dark"] .hero-badge{
+  box-shadow:inset 0 1px 0 rgba(244,238,227,.06);
 }
 
 /* ---------- misc ---------- */
