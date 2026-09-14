@@ -148,6 +148,31 @@
     if (el) el.textContent = new Date().getFullYear();
   }
 
+  // ---------- Alternância claro/escuro ----------
+  function wireThemeToggle() {
+    var root = document.documentElement;
+    var btn = document.getElementById("themeToggle");
+    if (!btn) return;
+    var STORAGE_KEY = "studiolina-theme";
+
+    var syncButton = function () {
+      var isDark = root.getAttribute("data-theme") === "dark";
+      btn.setAttribute("aria-pressed", isDark ? "true" : "false");
+    };
+    syncButton();
+
+    btn.addEventListener("click", function () {
+      var isDark = root.getAttribute("data-theme") === "dark";
+      if (isDark) {
+        root.removeAttribute("data-theme");
+      } else {
+        root.setAttribute("data-theme", "dark");
+      }
+      try { localStorage.setItem(STORAGE_KEY, isDark ? "light" : "dark"); } catch (e) {}
+      syncButton();
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     wireWhatsappButtons();
     wireHeaderScroll();
@@ -155,6 +180,7 @@
     wireServiceTabs();
     wireGalleryLightbox();
     wireRevealOnScroll();
+    wireThemeToggle();
     setYear();
   });
 })();
