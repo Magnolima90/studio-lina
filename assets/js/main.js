@@ -32,7 +32,7 @@
         e.preventDefault();
         var service = btn.getAttribute("data-service");
         var message = service
-          ? "Olá! Gostaria de agendar o serviço de *" + service + "* no Studio Lina 💛"
+          ? "Olá, quero agendar: " + service + " 💛"
           : btn.getAttribute("data-wa-message");
         trackEvent("cta_click", { cta_label: btn.getAttribute("data-track-label") || service || "whatsapp" });
         window.open(buildWaLink(message), "_blank", "noopener");
@@ -61,26 +61,48 @@
     });
   }
 
-  // ---------- FAQ (acordeão) ----------
-  function wireFaq() {
-    var items = document.querySelectorAll(".faq-item");
-    if (!items.length) return;
-    items.forEach(function (item) {
-      var q = item.querySelector(".faq-q");
-      var a = item.querySelector(".faq-a");
-      if (!q || !a) return;
-      q.addEventListener("click", function () {
-        var isOpen = item.classList.contains("open");
-        items.forEach(function (other) {
-          other.classList.remove("open");
-          other.querySelector(".faq-a").style.maxHeight = null;
-          other.querySelector(".faq-q").setAttribute("aria-expanded", "false");
-        });
-        if (!isOpen) {
-          item.classList.add("open");
-          a.style.maxHeight = a.scrollHeight + "px";
-          q.setAttribute("aria-expanded", "true");
-        }
+  // ---------- "Saiba mais" do curso (expande sem sair da página) ----------
+  function wireCourseMore() {
+    var toggle = document.getElementById("courseMoreToggle");
+    var details = document.getElementById("courseDetails");
+    if (!toggle || !details) return;
+    var label = toggle.querySelector(".label");
+
+    toggle.addEventListener("click", function () {
+      var isOpen = toggle.getAttribute("aria-expanded") === "true";
+      if (isOpen) {
+        details.style.maxHeight = null;
+        toggle.setAttribute("aria-expanded", "false");
+        if (label) label.textContent = "Saiba mais";
+      } else {
+        details.style.maxHeight = details.scrollHeight + "px";
+        toggle.setAttribute("aria-expanded", "true");
+        if (label) label.textContent = "Ver menos";
+      }
+    });
+  }
+
+  // ---------- Accordion de preços avulsos (fechado no mobile, aberto no desktop) ----------
+  function wirePriceAccordion() {
+    var groups = document.querySelectorAll(".price-list-group");
+    if (!groups.length) return;
+    var isMobile = window.matchMedia("(max-width: 720px)").matches;
+
+    groups.forEach(function (group) {
+      var toggle = group.querySelector(".price-list-toggle");
+      var body = group.querySelector(".price-list-body");
+      if (!toggle || !body) return;
+
+      var setOpen = function (open) {
+        group.classList.toggle("open", open);
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        body.style.maxHeight = open ? body.scrollHeight + "px" : null;
+      };
+
+      setOpen(!isMobile);
+
+      toggle.addEventListener("click", function () {
+        setOpen(!group.classList.contains("open"));
       });
     });
   }
@@ -182,7 +204,7 @@
 
   // ---------- Animações ao rolar ----------
   function wireRevealOnScroll() {
-    var revealEls = document.querySelectorAll(".reveal, .blur-reveal");
+    var revealEls = document.querySelectorAll(".reveal, .blur-reveal, .reveal-sm");
     if (!revealEls.length) return;
     if (!("IntersectionObserver" in window)) {
       revealEls.forEach(function (el) { el.classList.add("in-view"); });
@@ -233,7 +255,8 @@
   document.addEventListener("DOMContentLoaded", function () {
     wireWhatsappButtons();
     wireLeadForm();
-    wireFaq();
+    wireCourseMore();
+    wirePriceAccordion();
     wireHeaderScroll();
     wireMobileNav();
     wireServiceTabs();

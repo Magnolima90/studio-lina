@@ -116,12 +116,12 @@
 
     <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
       <button class="nav-close" id="navClose" aria-label="Fechar menu">✕</button>
-      <a href="#sobre">Sobre</a>
       <a href="#servicos">Serviços</a>
-      <a href="#curso">Curso</a>
       <a href="#galeria">Galeria</a>
-      <a href="#depoimentos">Depoimentos</a>
+      <a href="#sobre">Sobre</a>
       <a href="#localizacao">Localização</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#curso">Curso</a>
       <a href="#contato">Contato</a>
     </nav>
 
@@ -194,6 +194,222 @@
     </div>
   </div>
 
+  <!-- ============ SERVIÇOS ============ -->
+  <section id="servicos">
+    <div class="wrap">
+      <div class="section-head center">
+        <div class="eyebrow"><span>O que oferecemos</span></div>
+        <h2 class="blur-reveal">Serviços feitos sob medida para você</h2>
+        <p>Escolha um serviço e fale com a gente pelo WhatsApp — já com o valor combinado.</p>
+      </div>
+
+      <div class="services-tabs" role="tablist" aria-label="Categorias de serviço">
+        <button class="tab-btn active" type="button" data-tab="depilacao">Depilação</button>
+        <button class="tab-btn" type="button" data-tab="spa">Spa de Banhos</button>
+        <button class="tab-btn" type="button" data-tab="estetica">Estética Facial</button>
+        <button class="tab-btn" type="button" data-tab="clareamento">Clareamento Natural</button>
+      </div>
+
+      <!-- Depilação -->
+      <div class="service-panel active" id="panel-depilacao">
+        <div class="service-grid">
+          <button class="service-card reveal-sm wa-cta" type="button" data-service="Depilação íntima Completa + Hidratação (R$60,00)">
+            <span class="info"><span class="name">Íntima Completa + Hidratação</span><p class="desc">Remoção de todos os pelos da região íntima — púbis, lábios e ânus — para sensação de suavidade total.</p></span>
+            <span class="meta"><span class="price">R$60,00</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
+          </button>
+          <button class="service-card reveal-sm wa-cta" type="button" data-service="Depilação + Detox (R$75,00)">
+            <span class="info"><span class="name">Depilação + Detox</span><p class="desc">Argila branca que acalma a pele, previne foliculite e irritações e clareia manchas após a depilação.</p></span>
+            <span class="meta"><span class="price">R$75,00</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
+          </button>
+          <button class="service-card reveal-sm wa-cta" type="button" data-service="Spa íntimo (R$120,00)">
+            <span class="info"><span class="name">Spa Íntimo</span><p class="desc">Tratamento completo de hidratação e renovação da pele da região íntima, prevenindo irritações e manchas.</p></span>
+            <span class="meta"><span class="price">R$120,00</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
+          </button>
+          <button class="service-card reveal-sm wa-cta" type="button" data-service="Tratamento Foliculite (R$90,00)">
+            <span class="info"><span class="name">Tratamento Foliculite</span><p class="desc">Cuidado com a pele usando aparelhos e produtos adequados para prevenir e tratar a foliculite.</p></span>
+            <span class="meta"><span class="price">R$90,00</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
+          </button>
+        </div>
+
+        <h3 class="services-subhead">Avulsos</h3>
+        <div class="price-list">
+          <div class="price-list-group reveal-sm">
+            <button class="price-list-toggle" type="button" aria-expanded="false">
+              <span class="price-list-title">Íntima</span>
+              <span class="price-list-count">1 item</span>
+              <span class="chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></span>
+            </button>
+            <div class="price-list-body"><div class="price-list-body-inner">
+              <button class="price-row wa-cta" type="button" data-service="Depilação — Virilha simples (R$50,00)"><span class="name">Virilha simples</span><span class="price">R$50,00</span></button>
+            </div></div>
+          </div>
+          <div class="price-list-group reveal-sm">
+            <button class="price-list-toggle" type="button" aria-expanded="false">
+              <span class="price-list-title">Facial</span>
+              <span class="price-list-count">5 itens</span>
+              <span class="chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></span>
+            </button>
+            <div class="price-list-body"><div class="price-list-body-inner">
+              <button class="price-row wa-cta" type="button" data-service="Depilação — Buço (R$15,00)"><span class="name">Buço</span><span class="price">R$15,00</span></button>
+              <button class="price-row wa-cta" type="button" data-service="Depilação — Buço e queixo (R$25,00)"><span class="name">Buço e queixo</span><span class="price">R$25,00</span></button>
+              <button class="price-row wa-cta" type="button" data-service="Depilação — Nariz (R$10,00)"><span class="name">Nariz</span><span class="price">R$10,00</span></button>
+              <button class="price-row wa-cta" type="button" data-service="Depilação — Lateral face (R$20,00)"><span class="name">Lateral face</span><span class="price">R$20,00</span></button>
+              <button class="price-row wa-cta" type="button" data-service="Depilação — Face (R$40,00)"><span class="name">Face</span><span class="price">R$40,00</span></button>
+            </div></div>
+          </div>
+          <div class="price-list-group reveal-sm">
+            <button class="price-list-toggle" type="button" aria-expanded="false">
+              <span class="price-list-title">Corporal</span>
+              <span class="price-list-count">6 itens</span>
+              <span class="chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></span>
+            </button>
+            <div class="price-list-body"><div class="price-list-body-inner">
+              <button class="price-row wa-cta" type="button" data-service="Depilação — Perna (R$35,00)"><span class="name">Perna</span><span class="price">R$35,00</span></button>
+              <button class="price-row wa-cta" type="button" data-service="Depilação — Perna completa (R$65,00)"><span class="name">Perna completa</span><span class="price">R$65,00</span></button>
+              <button class="price-row wa-cta" type="button" data-service="Depilação — Coxa (R$35,00)"><span class="name">Coxa</span><span class="price">R$35,00</span></button>
+              <button class="price-row wa-cta" type="button" data-service="Depilação — Nádegas (R$25,00)"><span class="name">Nádegas</span><span class="price">R$25,00</span></button>
+              <button class="price-row wa-cta" type="button" data-service="Depilação — Lateral anal (R$30,00)"><span class="name">Lateral anal</span><span class="price">R$30,00</span></button>
+              <button class="price-row wa-cta" type="button" data-service="Depilação — Axila (R$25,00)"><span class="name">Axila</span><span class="price">R$25,00</span></button>
+            </div></div>
+          </div>
+          <div class="price-list-group reveal-sm">
+            <button class="price-list-toggle" type="button" aria-expanded="false">
+              <span class="price-list-title">Avulsos</span>
+              <span class="price-list-count">4 itens</span>
+              <span class="chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></span>
+            </button>
+            <div class="price-list-body"><div class="price-list-body-inner">
+              <button class="price-row wa-cta" type="button" data-service="Depilação — Abdômen (R$25,00)"><span class="name">Abdômen</span><span class="price">R$25,00</span></button>
+              <button class="price-row wa-cta" type="button" data-service="Depilação — Linha umbigo (R$10,00)"><span class="name">Linha umbigo</span><span class="price">R$10,00</span></button>
+              <button class="price-row wa-cta" type="button" data-service="Depilação — Glúteo + ânus (R$45,00)"><span class="name">Glúteo + ânus</span><span class="price">R$45,00</span></button>
+              <button class="price-row wa-cta" type="button" data-service="Depilação — Seios (R$10,00)"><span class="name">Seios</span><span class="price">R$10,00</span></button>
+            </div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spa de Banhos -->
+      <div class="service-panel" id="panel-spa">
+        <div class="service-grid">
+          <button class="service-card reveal-sm wa-cta" type="button" data-service="Banho de Lua Expresso (R$70,00)">
+            <span class="info"><span class="name">Banho de Lua Expresso</span><p class="desc">Banho rápido de autocuidado: selante corporal, descoloração e clareamento dos pelos e da pele, espuma de banho e hidratante iluminador.</p></span>
+            <span class="meta"><span class="price">R$70,00</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
+          </button>
+          <button class="service-card reveal-sm wa-cta" type="button" data-service="Spa Corporal Clareador (R$100,00)">
+            <span class="info"><span class="name">Spa Corporal Clareador</span><p class="desc">Banho relaxante que clareia e mantém a pele iluminada: selador corporal, sais de banho, esfoliação e óleos essenciais.</p></span>
+            <span class="meta"><span class="price">R$100,00</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
+          </button>
+          <button class="service-card reveal-sm wa-cta" type="button" data-service="Spa Corporal Gestante (R$110,00)">
+            <span class="info"><span class="name">Spa Corporal Gestante</span><p class="desc">Banho de autocuidado pensado para gestantes: descoloração sem amônia, camomila, esfoliação, óleo e hidratante.</p></span>
+            <span class="meta"><span class="price">R$110,00</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Estética Facial -->
+      <div class="service-panel" id="panel-estetica">
+        <div class="service-grid">
+          <button class="service-card reveal-sm wa-cta" type="button" data-service="Limpeza de pele (R$100,00)">
+            <span class="info"><span class="name">Limpeza de pele</span><p class="desc">Remove impurezas e oleosidade em profundidade: higienização, esfoliação, extração e máscara calmante com protetor solar.</p></span>
+            <span class="meta"><span class="price">R$100,00</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
+          </button>
+          <button class="service-card reveal-sm wa-cta" type="button" data-service="Limpeza de pele + vitC (R$129,00)">
+            <span class="info"><span class="name">Limpeza de pele + vitC</span><p class="desc">Limpeza facial com vitamina C, unindo benefícios antioxidantes e clareadores.</p></span>
+            <span class="meta"><span class="price">R$129,00</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
+          </button>
+          <button class="service-card reveal-sm wa-cta" type="button" data-service="Hidratação Facial (R$60,00)">
+            <span class="info"><span class="name">Hidratação Facial</span><p class="desc">Repõe água e nutrientes na pele do rosto, deixando-a saudável, macia, luminosa e com mais elasticidade.</p></span>
+            <span class="meta"><span class="price">R$60,00</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
+          </button>
+          <button class="service-card reveal-sm wa-cta" type="button" data-service="Microagulhamento (R$150,00)">
+            <span class="info"><span class="name">Microagulhamento</span><p class="desc">Microperfurações que estimulam colágeno e elastina — trata cicatrizes de acne, estrias, rugas, manchas e flacidez.</p></span>
+            <span class="meta"><span class="price">R$150,00</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Clareamento Natural -->
+      <div class="service-panel" id="panel-clareamento">
+        <div class="package-grid">
+          <div class="package-card reveal-sm">
+            <div class="package-head"><span class="package-icon">🌸</span><h4>Axilas</h4></div>
+            <div class="package-tiers">
+              <button class="tier wa-cta" type="button" data-service="Clareamento Natural — Axilas, 1 sessão (R$45,00)">1 sessão<strong>R$45</strong></button>
+              <button class="tier wa-cta" type="button" data-service="Clareamento Natural — Axilas, 3 sessões (R$120,00)">3 sessões<strong>R$120</strong></button>
+              <button class="tier tier-best wa-cta" type="button" data-service="Clareamento Natural — Axilas, 5 sessões (R$190,00)"><span class="tier-badge">Melhor economia</span>5 sessões<strong>R$190</strong><span class="tier-sub">R$38/sessão</span></button>
+            </div>
+          </div>
+          <div class="package-card reveal-sm">
+            <div class="package-head"><span class="package-icon">💎</span><h4>Virilha Gold</h4></div>
+            <div class="package-tiers">
+              <button class="tier wa-cta" type="button" data-service="Clareamento Natural — Virilha Gold, 1 sessão (R$55,00)">1 sessão<strong>R$55</strong></button>
+              <button class="tier wa-cta" type="button" data-service="Clareamento Natural — Virilha Gold, 3 sessões (R$150,00)">3 sessões<strong>R$150</strong></button>
+              <button class="tier tier-best wa-cta" type="button" data-service="Clareamento Natural — Virilha Gold, 5 sessões (R$230,00)"><span class="tier-badge">Melhor economia</span>5 sessões<strong>R$230</strong><span class="tier-sub">R$46/sessão</span></button>
+            </div>
+          </div>
+          <div class="package-card reveal-sm">
+            <div class="package-head"><span class="package-icon">👑</span><h4>Combo Premium — Axilas + Virilha</h4></div>
+            <div class="package-tiers">
+              <button class="tier wa-cta" type="button" data-service="Clareamento Natural — Combo Premium (Axilas + Virilha), 1 sessão (R$90,00)">1 sessão<strong>R$90</strong></button>
+              <button class="tier wa-cta" type="button" data-service="Clareamento Natural — Combo Premium (Axilas + Virilha), 3 sessões (R$240,00)">3 sessões<strong>R$240</strong></button>
+              <button class="tier tier-best wa-cta" type="button" data-service="Clareamento Natural — Combo Premium (Axilas + Virilha), 5 sessões (R$380,00)"><span class="tier-badge">Melhor economia</span>5 sessões<strong>R$380</strong><span class="tier-sub">R$76/sessão</span></button>
+            </div>
+          </div>
+          <div class="package-card reveal-sm">
+            <div class="package-head"><span class="package-icon">🌿</span><h4>Tratamento para Foliculite</h4></div>
+            <div class="package-tiers">
+              <button class="tier wa-cta" type="button" data-service="Clareamento Natural — Tratamento para Foliculite, 1 sessão (R$70,00)">1 sessão<strong>R$70</strong></button>
+              <button class="tier wa-cta" type="button" data-service="Clareamento Natural — Tratamento para Foliculite, 3 sessões (R$190,00)">3 sessões<strong>R$190</strong></button>
+              <button class="tier tier-best wa-cta" type="button" data-service="Clareamento Natural — Tratamento para Foliculite, 5 sessões (R$300,00)"><span class="tier-badge">Melhor economia</span>5 sessões<strong>R$300</strong><span class="tier-sub">R$60/sessão</span></button>
+            </div>
+          </div>
+        </div>
+        <p class="package-note">✨ Cuidados personalizados para uma pele mais uniforme, hidratada e bem cuidada.</p>
+      </div>
+
+      <p class="services-note">Não encontrou o serviço que procura? <a class="link-inline wa-cta" href="#" data-wa-message="Olá! Gostaria de saber mais sobre os serviços do Studio Lina.">Fale com a gente pelo WhatsApp</a>.</p>
+    </div>
+  </section>
+
+  <!-- ============ CTA AGENDAMENTO ============ -->
+  <section>
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h2>Encontrou o serviço ideal?</h2>
+          <p>Fale com a gente agora mesmo e garanta seu horário no Studio Lina.</p>
+        </div>
+        <a class="btn btn-primary wa-cta" href="#" data-wa-message="Olá! Gostaria de agendar um horário no Studio Lina 💛" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.39.75 2.98 1.18 4.62 1.18h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.79 14.14c-.24.68-1.39 1.32-1.92 1.4-.49.08-1.11.11-1.79-.11-.41-.13-.94-.3-1.62-.6-2.85-1.23-4.71-4.1-4.85-4.29-.14-.19-1.16-1.54-1.16-2.94 0-1.4.73-2.09 1-2.38.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.98.88 2.12.07.14.11.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.42.48-.14.14-.28.29-.12.56.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.21 1.37.28.14.44.12.6-.07.16-.19.68-.8.87-1.07.18-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
+          Agendar pelo WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALERIA ============ -->
+  <section id="galeria">
+    <div class="wrap">
+      <div class="section-head center">
+        <div class="eyebrow"><span>Nosso espaço</span></div>
+        <h2 class="blur-reveal">Conheça o Studio Lina</h2>
+        <p>Mais fotos dos trabalhos e do espaço em breve — acompanhe também pelo Instagram <a class="link-inline" href="https://www.instagram.com/depilacao_studiolina/" target="_blank" rel="noopener">@depilacao_studiolina</a>.</p>
+      </div>
+      <div class="gallery-grid">
+        <figure class="g-wide gallery-item" data-full="assets/img/salao-lounge.jpg">
+          <img src="assets/img/salao-lounge.jpg" alt="Sala de espera e manicure do Studio Lina" loading="lazy">
+        </figure>
+        <figure class="gallery-item" data-full="assets/img/sala-tratamento.jpg">
+          <img src="assets/img/sala-tratamento.jpg" alt="Sala de tratamento e depilação do Studio Lina" loading="lazy">
+        </figure>
+        <figure class="gallery-soon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 17l-5.5-5.5a1 1 0 0 0-1.4 0L9 17"/></svg><span>Mais fotos<br>em breve</span></figure>
+        <figure class="gallery-soon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 17l-5.5-5.5a1 1 0 0 0-1.4 0L9 17"/></svg><span>Mais fotos<br>em breve</span></figure>
+        <figure class="gallery-soon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 17l-5.5-5.5a1 1 0 0 0-1.4 0L9 17"/></svg><span>Mais fotos<br>em breve</span></figure>
+        <figure class="gallery-soon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 17l-5.5-5.5a1 1 0 0 0-1.4 0L9 17"/></svg><span>Mais fotos<br>em breve</span></figure>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ SOBRE ============ -->
   <section id="sobre">
     <div class="wrap about-grid">
@@ -217,159 +433,6 @@
     </div>
   </section>
 
-  <!-- ============ SERVIÇOS ============ -->
-  <section id="servicos">
-    <div class="wrap">
-      <div class="section-head center">
-        <div class="eyebrow"><span>O que oferecemos</span></div>
-        <h2 class="blur-reveal">Serviços feitos sob medida para você</h2>
-        <p>Escolha um serviço e fale com a gente pelo WhatsApp — já com o valor combinado.</p>
-      </div>
-
-      <div class="services-tabs" role="tablist" aria-label="Categorias de serviço">
-        <button class="tab-btn active" type="button" data-tab="depilacao">Depilação</button>
-        <button class="tab-btn" type="button" data-tab="spa">Spa de Banhos</button>
-        <button class="tab-btn" type="button" data-tab="estetica">Estética Facial</button>
-        <button class="tab-btn" type="button" data-tab="clareamento">Clareamento Natural</button>
-      </div>
-
-      <!-- Depilação -->
-      <div class="service-panel active" id="panel-depilacao">
-        <div class="service-grid">
-          <button class="service-card wa-cta" type="button" data-service="Depilação íntima Completa + Hidratação (R$60,00)">
-            <span class="info"><span class="name">Íntima Completa + Hidratação</span><p class="desc">Remoção de todos os pelos da região íntima — púbis, lábios e ânus — para sensação de suavidade total.</p></span>
-            <span class="meta"><span class="price">R$60,00</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
-          </button>
-          <button class="service-card wa-cta" type="button" data-service="Depilação + Detox (R$75,00)">
-            <span class="info"><span class="name">Depilação + Detox</span><p class="desc">Argila branca que acalma a pele, previne foliculite e irritações e clareia manchas após a depilação.</p></span>
-            <span class="meta"><span class="price">R$75,00</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
-          </button>
-          <button class="service-card wa-cta" type="button" data-service="Spa íntimo (R$120,00)">
-            <span class="info"><span class="name">Spa Íntimo</span><p class="desc">Tratamento completo de hidratação e renovação da pele da região íntima, prevenindo irritações e manchas.</p></span>
-            <span class="meta"><span class="price">R$120,00</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
-          </button>
-          <button class="service-card wa-cta" type="button" data-service="Tratamento Foliculite (R$90,00)">
-            <span class="info"><span class="name">Tratamento Foliculite</span><p class="desc">Cuidado com a pele usando aparelhos e produtos adequados para prevenir e tratar a foliculite.</p></span>
-            <span class="meta"><span class="price">R$90,00</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
-          </button>
-        </div>
-
-        <h3 class="services-subhead">Avulsos</h3>
-        <div class="price-list">
-          <div class="price-list-group">
-            <h4 class="price-list-title">Íntima</h4>
-            <button class="price-row wa-cta" type="button" data-service="Depilação — Virilha simples (R$50,00)"><span class="name">Virilha simples</span><span class="price">R$50,00</span></button>
-          </div>
-          <div class="price-list-group">
-            <h4 class="price-list-title">Facial</h4>
-            <button class="price-row wa-cta" type="button" data-service="Depilação — Buço (R$15,00)"><span class="name">Buço</span><span class="price">R$15,00</span></button>
-            <button class="price-row wa-cta" type="button" data-service="Depilação — Buço e queixo (R$25,00)"><span class="name">Buço e queixo</span><span class="price">R$25,00</span></button>
-            <button class="price-row wa-cta" type="button" data-service="Depilação — Nariz (R$10,00)"><span class="name">Nariz</span><span class="price">R$10,00</span></button>
-            <button class="price-row wa-cta" type="button" data-service="Depilação — Lateral face (R$20,00)"><span class="name">Lateral face</span><span class="price">R$20,00</span></button>
-            <button class="price-row wa-cta" type="button" data-service="Depilação — Face (R$40,00)"><span class="name">Face</span><span class="price">R$40,00</span></button>
-          </div>
-          <div class="price-list-group">
-            <h4 class="price-list-title">Corporal</h4>
-            <button class="price-row wa-cta" type="button" data-service="Depilação — Perna (R$35,00)"><span class="name">Perna</span><span class="price">R$35,00</span></button>
-            <button class="price-row wa-cta" type="button" data-service="Depilação — Perna completa (R$65,00)"><span class="name">Perna completa</span><span class="price">R$65,00</span></button>
-            <button class="price-row wa-cta" type="button" data-service="Depilação — Coxa (R$35,00)"><span class="name">Coxa</span><span class="price">R$35,00</span></button>
-            <button class="price-row wa-cta" type="button" data-service="Depilação — Nádegas (R$25,00)"><span class="name">Nádegas</span><span class="price">R$25,00</span></button>
-            <button class="price-row wa-cta" type="button" data-service="Depilação — Lateral anal (R$30,00)"><span class="name">Lateral anal</span><span class="price">R$30,00</span></button>
-            <button class="price-row wa-cta" type="button" data-service="Depilação — Axila (R$25,00)"><span class="name">Axila</span><span class="price">R$25,00</span></button>
-          </div>
-          <div class="price-list-group">
-            <h4 class="price-list-title">Avulsos</h4>
-            <button class="price-row wa-cta" type="button" data-service="Depilação — Abdômen (R$25,00)"><span class="name">Abdômen</span><span class="price">R$25,00</span></button>
-            <button class="price-row wa-cta" type="button" data-service="Depilação — Linha umbigo (R$10,00)"><span class="name">Linha umbigo</span><span class="price">R$10,00</span></button>
-            <button class="price-row wa-cta" type="button" data-service="Depilação — Glúteo + ânus (R$45,00)"><span class="name">Glúteo + ânus</span><span class="price">R$45,00</span></button>
-            <button class="price-row wa-cta" type="button" data-service="Depilação — Seios (R$10,00)"><span class="name">Seios</span><span class="price">R$10,00</span></button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Spa de Banhos -->
-      <div class="service-panel" id="panel-spa">
-        <div class="service-grid">
-          <button class="service-card wa-cta" type="button" data-service="Banho de Lua Expresso (R$70,00)">
-            <span class="info"><span class="name">Banho de Lua Expresso</span><p class="desc">Banho rápido de autocuidado: selante corporal, descoloração e clareamento dos pelos e da pele, espuma de banho e hidratante iluminador.</p></span>
-            <span class="meta"><span class="price">R$70,00</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
-          </button>
-          <button class="service-card wa-cta" type="button" data-service="Spa Corporal Clareador (R$100,00)">
-            <span class="info"><span class="name">Spa Corporal Clareador</span><p class="desc">Banho relaxante que clareia e mantém a pele iluminada: selador corporal, sais de banho, esfoliação e óleos essenciais.</p></span>
-            <span class="meta"><span class="price">R$100,00</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
-          </button>
-          <button class="service-card wa-cta" type="button" data-service="Spa Corporal Gestante (R$110,00)">
-            <span class="info"><span class="name">Spa Corporal Gestante</span><p class="desc">Banho de autocuidado pensado para gestantes: descoloração sem amônia, camomila, esfoliação, óleo e hidratante.</p></span>
-            <span class="meta"><span class="price">R$110,00</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Estética Facial -->
-      <div class="service-panel" id="panel-estetica">
-        <div class="service-grid">
-          <button class="service-card wa-cta" type="button" data-service="Limpeza de pele (R$100,00)">
-            <span class="info"><span class="name">Limpeza de pele</span><p class="desc">Remove impurezas e oleosidade em profundidade: higienização, esfoliação, extração e máscara calmante com protetor solar.</p></span>
-            <span class="meta"><span class="price">R$100,00</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
-          </button>
-          <button class="service-card wa-cta" type="button" data-service="Limpeza de pele + vitC (R$129,00)">
-            <span class="info"><span class="name">Limpeza de pele + vitC</span><p class="desc">Limpeza facial com vitamina C, unindo benefícios antioxidantes e clareadores.</p></span>
-            <span class="meta"><span class="price">R$129,00</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
-          </button>
-          <button class="service-card wa-cta" type="button" data-service="Hidratação Facial (R$60,00)">
-            <span class="info"><span class="name">Hidratação Facial</span><p class="desc">Repõe água e nutrientes na pele do rosto, deixando-a saudável, macia, luminosa e com mais elasticidade.</p></span>
-            <span class="meta"><span class="price">R$60,00</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
-          </button>
-          <button class="service-card wa-cta" type="button" data-service="Microagulhamento (R$150,00)">
-            <span class="info"><span class="name">Microagulhamento</span><p class="desc">Microperfurações que estimulam colágeno e elastina — trata cicatrizes de acne, estrias, rugas, manchas e flacidez.</p></span>
-            <span class="meta"><span class="price">R$150,00</span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Clareamento Natural -->
-      <div class="service-panel" id="panel-clareamento">
-        <div class="package-grid">
-          <div class="package-card">
-            <div class="package-head"><span class="package-icon">🌸</span><h4>Axilas</h4></div>
-            <div class="package-tiers">
-              <button class="tier wa-cta" type="button" data-service="Clareamento Natural — Axilas, 1 sessão (R$45,00)">1 sessão<strong>R$45</strong></button>
-              <button class="tier wa-cta" type="button" data-service="Clareamento Natural — Axilas, 3 sessões (R$120,00)">3 sessões<strong>R$120</strong></button>
-              <button class="tier wa-cta" type="button" data-service="Clareamento Natural — Axilas, 5 sessões (R$190,00)">5 sessões<strong>R$190</strong></button>
-            </div>
-          </div>
-          <div class="package-card">
-            <div class="package-head"><span class="package-icon">💎</span><h4>Virilha Gold</h4></div>
-            <div class="package-tiers">
-              <button class="tier wa-cta" type="button" data-service="Clareamento Natural — Virilha Gold, 1 sessão (R$55,00)">1 sessão<strong>R$55</strong></button>
-              <button class="tier wa-cta" type="button" data-service="Clareamento Natural — Virilha Gold, 3 sessões (R$150,00)">3 sessões<strong>R$150</strong></button>
-              <button class="tier wa-cta" type="button" data-service="Clareamento Natural — Virilha Gold, 5 sessões (R$230,00)">5 sessões<strong>R$230</strong></button>
-            </div>
-          </div>
-          <div class="package-card">
-            <div class="package-head"><span class="package-icon">👑</span><h4>Combo Premium — Axilas + Virilha</h4></div>
-            <div class="package-tiers">
-              <button class="tier wa-cta" type="button" data-service="Clareamento Natural — Combo Premium (Axilas + Virilha), 1 sessão (R$90,00)">1 sessão<strong>R$90</strong></button>
-              <button class="tier wa-cta" type="button" data-service="Clareamento Natural — Combo Premium (Axilas + Virilha), 3 sessões (R$240,00)">3 sessões<strong>R$240</strong></button>
-              <button class="tier wa-cta" type="button" data-service="Clareamento Natural — Combo Premium (Axilas + Virilha), 5 sessões (R$380,00)">5 sessões<strong>R$380</strong></button>
-            </div>
-          </div>
-          <div class="package-card">
-            <div class="package-head"><span class="package-icon">🌿</span><h4>Tratamento para Foliculite</h4></div>
-            <div class="package-tiers">
-              <button class="tier wa-cta" type="button" data-service="Clareamento Natural — Tratamento para Foliculite, 1 sessão (R$70,00)">1 sessão<strong>R$70</strong></button>
-              <button class="tier wa-cta" type="button" data-service="Clareamento Natural — Tratamento para Foliculite, 3 sessões (R$190,00)">3 sessões<strong>R$190</strong></button>
-              <button class="tier wa-cta" type="button" data-service="Clareamento Natural — Tratamento para Foliculite, 5 sessões (R$300,00)">5 sessões<strong>R$300</strong></button>
-            </div>
-          </div>
-        </div>
-        <p class="package-note">✨ Cuidados personalizados para uma pele mais uniforme, hidratada e bem cuidada.</p>
-      </div>
-
-      <p class="services-note">Não encontrou o serviço que procura? <a class="link-inline wa-cta" href="#" data-wa-message="Olá! Gostaria de saber mais sobre os serviços do Studio Lina.">Fale com a gente pelo WhatsApp</a>.</p>
-    </div>
-  </section>
-
   <!-- ============ DIFERENCIAIS ============ -->
   <section class="features">
     <div class="wrap">
@@ -378,22 +441,121 @@
         <h2 class="blur-reveal">Cuidado que vai além da técnica</h2>
       </div>
       <div class="feature-grid">
-        <div class="feature-card reveal">
+        <div class="feature-card reveal-sm">
           <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3c1 3 3 5 6 6-3 1-5 3-6 6-1-3-3-5-6-6 3-1 5-3 6-6z"/></svg></span>
           <h3>Atendimento personalizado</h3>
           <p>Cada cliente é ouvida com atenção, para um resultado que respeita seu estilo e sua pele.</p>
         </div>
-        <div class="feature-card reveal">
+        <div class="feature-card reveal-sm">
           <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-4.35-9.5-8.5C.7 9 2 5.5 5.4 5.1 7.5 4.9 9 6 12 8.5 15 6 16.5 4.9 18.6 5.1 22 5.5 23.3 9 21.5 12.5 19 16.65 12 21 12 21z"/></svg></span>
           <h3>Cuidado com carinho</h3>
           <p>Um ambiente pensado para você relaxar do início ao fim do atendimento.</p>
         </div>
-        <div class="feature-card reveal">
+        <div class="feature-card reveal-sm">
           <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></span>
           <h3>Agendamento fácil</h3>
           <p>Marque seu horário em poucos minutos, direto pelo WhatsApp.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ HORÁRIOS + LOCALIZAÇÃO ============ -->
+  <section id="localizacao">
+    <div class="wrap">
+      <div class="section-head center">
+        <div class="eyebrow"><span>Horário &amp; Localização</span></div>
+        <h2 class="blur-reveal">Venha nos visitar</h2>
+      </div>
+      <div class="info-grid">
+        <div class="info-card reveal">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Horário de funcionamento</h3>
+          <ul class="hours-list" id="hoursList">
+            <li><span class="day">Segunda a Sexta</span><span class="hour">09h às 19h</span></li>
+            <li><span class="day">Sábado</span><span class="hour">09h às 17h</span></li>
+            <li><span class="day">Domingo</span><span class="hour status-closed">Fechado</span></li>
+          </ul>
+          <div class="payment-methods">
+            <span class="payment-methods-label">Formas de pagamento</span>
+            <div class="payment-badges">
+              <span class="payment-badge">Pix</span>
+              <span class="payment-badge">Débito</span>
+              <span class="payment-badge">Crédito*</span>
+            </div>
+            <span class="payment-note-small">*crédito com taxa da maquininha</span>
+          </div>
+          <a class="btn btn-dark wa-cta" href="#" data-wa-message="Olá! Gostaria de saber os horários disponíveis no Studio Lina.">Confirmar horário</a>
+        </div>
+        <div class="info-card reveal">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Onde estamos</h3>
+          <p class="location-address">
+            <strong>Studio Lina</strong>
+            Rua Tenente Queiroz, 594 — Antônio Bezerra, Fortaleza, CE
+          </p>
+          <div class="map-frame">
+            <iframe src="https://www.google.com/maps?q=Rua+Tenente+Queiroz,+594,+Antônio+Bezerra,+Fortaleza,+CE&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de localização do Studio Lina"></iframe>
+          </div>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Rua+Tenente+Queiroz,+594,+Antônio+Bezerra,+Fortaleza,+CE" target="_blank" rel="noopener">Traçar rota</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DEPOIMENTOS ============ -->
+  <!-- Depoimentos de exemplo — substitua pelos depoimentos reais das clientes do Studio Lina assim que estiverem disponíveis. -->
+  <section id="depoimentos" class="testimonials">
+    <div class="wrap">
+      <div class="section-head center">
+        <div class="eyebrow"><span>Depoimentos</span></div>
+        <h2 class="blur-reveal">Quem passa por aqui, sente a diferença</h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Atendimento super cuidadoso, me senti à vontade do início ao fim. Saí do salão renovada."</p>
+          <div class="testi-person">
+            <div class="testi-avatar">C</div>
+            <div><strong>Cliente Studio Lina</strong><span>Depilação</span></div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Ambiente acolhedor e profissionais muito atenciosas. Já é meu salão de confiança em Fortaleza."</p>
+          <div class="testi-person">
+            <div class="testi-avatar">C</div>
+            <div><strong>Cliente Studio Lina</strong><span>Spa de Banhos</span></div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Marquei pelo WhatsApp e foi tudo muito rápido. O resultado ficou exatamente como eu queria."</p>
+          <div class="testi-person">
+            <div class="testi-avatar">C</div>
+            <div><strong>Cliente Studio Lina</strong><span>Estética</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="testimonials-disclaimer">Depoimentos ilustrativos — em breve, avaliações reais de clientes do Studio Lina.</p>
+    </div>
+  </section>
+
+  <!-- ============ INSTAGRAM ============ -->
+  <section class="insta">
+    <div class="wrap">
+      <div class="section-head center">
+        <div class="eyebrow"><span>Siga o Studio Lina</span></div>
+        <h2 class="blur-reveal">Inspire-se no nosso Instagram</h2>
+      </div>
+      <a class="insta-handle" href="https://www.instagram.com/depilacao_studiolina/" target="_blank" rel="noopener">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.22-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.02-3.58.07-4.85C2.38 3.9 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg></span>
+        @depilacao_studiolina
+      </a>
+      <div class="insta-grid">
+        <div class="insta-tile"><img src="assets/img/salao-lounge.jpg" alt="Foto do Studio Lina no Instagram" loading="lazy"></div>
+        <div class="insta-tile"><img src="assets/img/sala-tratamento.jpg" alt="Foto do Studio Lina no Instagram" loading="lazy"></div>
+        <div class="insta-tile ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></div>
+      </div>
+      <a class="btn btn-dark" href="https://www.instagram.com/depilacao_studiolina/" target="_blank" rel="noopener">Seguir no Instagram</a>
     </div>
   </section>
 
@@ -413,8 +575,13 @@
           Quero começar agora
         </a>
         <p class="course-intro-note">Vagas para a próxima turma — consulte disponibilidade pelo WhatsApp.</p>
+        <button class="btn btn-outline course-more-toggle" type="button" id="courseMoreToggle" aria-expanded="false" aria-controls="courseDetails">
+          <span class="label">Saiba mais</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
       </div>
 
+      <div class="course-details" id="courseDetails">
       <h3 class="services-subhead">Para quem é esse curso?</h3>
       <div class="audience-grid">
         <div class="audience-card reveal"><div class="num">01</div><h4>Começando do zero</h4><p>Para quem nunca trabalhou com depilação.</p></div>
@@ -479,34 +646,6 @@
       </div>
       <p class="process-note reveal">Uma metodologia pensada para transformar conhecimento em habilidade prática e confiança profissional.</p>
 
-      <h3 class="services-subhead">Por que escolher o Studio Lina?</h3>
-      <div class="why-course-grid">
-        <div class="why-course-card reveal">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></span>
-          <h4>Método profissional</h4><p>Formação baseada em técnicas atuais do mercado da beleza.</p>
-        </div>
-        <div class="why-course-card reveal">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span>
-          <h4>Conteúdo estruturado</h4><p>Etapas organizadas, do básico ao avançado.</p>
-        </div>
-        <div class="why-course-card reveal">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3h6M10 3v5l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/></svg></span>
-          <h4>Aprendizado prático</h4><p>Conteúdo pensado para aplicação real no dia a dia.</p>
-        </div>
-        <div class="why-course-card reveal">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5z"/><path d="M14 3v5h5"/></svg></span>
-          <h4>Material de apoio</h4><p>Conteúdo para consultar sempre que precisar.</p>
-        </div>
-        <div class="why-course-card reveal">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="5"/><path d="M9 12.5 7 21l5-3 5 3-2-8.5"/></svg></span>
-          <h4>Certificado</h4><p>Certificado de conclusão ao final da formação.</p>
-        </div>
-        <div class="why-course-card reveal">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="3" y="13" width="4" height="6" rx="1"/><rect x="17" y="13" width="4" height="6" rx="1"/><path d="M20 19a4 4 0 0 1-4 4h-2"/></svg></span>
-          <h4>Suporte</h4><p>Acompanhamento próximo durante toda a jornada.</p>
-        </div>
-      </div>
-
       <div class="transform-grid">
         <div class="transform-media reveal">
           <div class="ring" aria-hidden="true"></div>
@@ -547,168 +686,7 @@
           <p class="form-note">Ao enviar, você será direcionada ao WhatsApp do Studio Lina.</p>
         </form>
       </div>
-
-      <h3 class="services-subhead">Perguntas frequentes</h3>
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false">O curso é para iniciantes?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-          <div class="faq-a"><div class="faq-a-inner">Sim! O curso foi desenvolvido para quem está começando do zero, sem nenhuma experiência prévia — mas também é indicado para profissionais que já atuam na área e querem aperfeiçoar suas técnicas.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false">Como funciona o curso?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-          <div class="faq-a"><div class="faq-a-inner">O conteúdo é apresentado em etapas — da teoria à prática — para que você aprenda no seu ritmo e ganhe confiança em cada técnica antes de avançar para a próxima.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false">Quanto tempo dura?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-          <div class="faq-a"><div class="faq-a-inner">A duração é combinada de acordo com a turma. Fale com a gente pelo WhatsApp para saber a carga horária da próxima turma.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false">O que está incluso?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-          <div class="faq-a"><div class="faq-a-inner">Conteúdo completo, material de apoio, certificado de conclusão e suporte durante o curso.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false">Recebo certificado?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-          <div class="faq-a"><div class="faq-a-inner">Sim, você recebe um certificado de conclusão ao final do curso.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false">Preciso comprar materiais?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-          <div class="faq-a"><div class="faq-a-inner">Informamos a lista de materiais necessários (se houver) no momento da inscrição, para você se organizar com antecedência.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false">Como funciona o pagamento?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-          <div class="faq-a"><div class="faq-a-inner">Valores e condições de parcelamento são combinados diretamente pelo WhatsApp, de acordo com a turma disponível.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false">Existe suporte?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-          <div class="faq-a"><div class="faq-a-inner">Sim, você conta com suporte ao aluno durante toda a formação.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false">Quando começa a próxima turma?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
-          <div class="faq-a"><div class="faq-a-inner">As turmas abrem periodicamente. Fale com a gente pelo WhatsApp para confirmar a data da próxima turma e garantir sua vaga.</div></div>
-        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ============ GALERIA ============ -->
-  <section id="galeria">
-    <div class="wrap">
-      <div class="section-head center">
-        <div class="eyebrow"><span>Nosso espaço</span></div>
-        <h2 class="blur-reveal">Conheça o Studio Lina</h2>
-        <p>Mais fotos dos trabalhos e do espaço em breve — acompanhe também pelo Instagram <a class="link-inline" href="https://www.instagram.com/depilacao_studiolina/" target="_blank" rel="noopener">@depilacao_studiolina</a>.</p>
-      </div>
-      <div class="gallery-grid">
-        <figure class="g-wide gallery-item" data-full="assets/img/salao-lounge.jpg">
-          <img src="assets/img/salao-lounge.jpg" alt="Sala de espera e manicure do Studio Lina" loading="lazy">
-        </figure>
-        <figure class="gallery-item" data-full="assets/img/sala-tratamento.jpg">
-          <img src="assets/img/sala-tratamento.jpg" alt="Sala de tratamento e depilação do Studio Lina" loading="lazy">
-        </figure>
-        <figure class="gallery-soon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 17l-5.5-5.5a1 1 0 0 0-1.4 0L9 17"/></svg><span>Mais fotos<br>em breve</span></figure>
-        <figure class="gallery-soon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 17l-5.5-5.5a1 1 0 0 0-1.4 0L9 17"/></svg><span>Mais fotos<br>em breve</span></figure>
-        <figure class="gallery-soon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 17l-5.5-5.5a1 1 0 0 0-1.4 0L9 17"/></svg><span>Mais fotos<br>em breve</span></figure>
-        <figure class="gallery-soon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="M21 17l-5.5-5.5a1 1 0 0 0-1.4 0L9 17"/></svg><span>Mais fotos<br>em breve</span></figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ DEPOIMENTOS ============ -->
-  <!-- Depoimentos de exemplo — substitua pelos depoimentos reais das clientes do Studio Lina assim que estiverem disponíveis. -->
-  <section id="depoimentos" class="testimonials">
-    <div class="wrap">
-      <div class="section-head center">
-        <div class="eyebrow"><span>Depoimentos</span></div>
-        <h2 class="blur-reveal">Quem passa por aqui, sente a diferença</h2>
-      </div>
-      <div class="testi-grid">
-        <div class="testi-card reveal">
-          <div class="testi-stars">★★★★★</div>
-          <p>"Atendimento super cuidadoso, me senti à vontade do início ao fim. Saí do salão renovada."</p>
-          <div class="testi-person">
-            <div class="testi-avatar">C</div>
-            <div><strong>Cliente Studio Lina</strong><span>Depilação</span></div>
-          </div>
-        </div>
-        <div class="testi-card reveal">
-          <div class="testi-stars">★★★★★</div>
-          <p>"Ambiente acolhedor e profissionais muito atenciosas. Já é meu salão de confiança em Fortaleza."</p>
-          <div class="testi-person">
-            <div class="testi-avatar">C</div>
-            <div><strong>Cliente Studio Lina</strong><span>Spa de Banhos</span></div>
-          </div>
-        </div>
-        <div class="testi-card reveal">
-          <div class="testi-stars">★★★★★</div>
-          <p>"Marquei pelo WhatsApp e foi tudo muito rápido. O resultado ficou exatamente como eu queria."</p>
-          <div class="testi-person">
-            <div class="testi-avatar">C</div>
-            <div><strong>Cliente Studio Lina</strong><span>Estética</span></div>
-          </div>
-        </div>
-      </div>
-      <p class="testimonials-disclaimer">Depoimentos ilustrativos — em breve, avaliações reais de clientes do Studio Lina.</p>
-    </div>
-  </section>
-
-  <!-- ============ HORÁRIOS + LOCALIZAÇÃO ============ -->
-  <section id="localizacao">
-    <div class="wrap">
-      <div class="section-head center">
-        <div class="eyebrow"><span>Horário &amp; Localização</span></div>
-        <h2 class="blur-reveal">Venha nos visitar</h2>
-      </div>
-      <div class="info-grid">
-        <div class="info-card reveal">
-          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Horário de funcionamento</h3>
-          <ul class="hours-list" id="hoursList">
-            <li><span class="day">Segunda a Sexta</span><span class="hour">09h às 19h</span></li>
-            <li><span class="day">Sábado</span><span class="hour">09h às 17h</span></li>
-            <li><span class="day">Domingo</span><span class="hour status-closed">Fechado</span></li>
-          </ul>
-          <div class="payment-methods">
-            <span class="payment-methods-label">Formas de pagamento</span>
-            <div class="payment-badges">
-              <span class="payment-badge">Pix</span>
-              <span class="payment-badge">Débito</span>
-              <span class="payment-badge">Crédito*</span>
-            </div>
-            <span class="payment-note-small">*crédito com taxa da maquininha</span>
-          </div>
-          <a class="btn btn-dark wa-cta" href="#" data-wa-message="Olá! Gostaria de saber os horários disponíveis no Studio Lina.">Confirmar horário</a>
-        </div>
-        <div class="info-card reveal">
-          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Onde estamos</h3>
-          <p class="location-address">
-            <strong>Studio Lina</strong>
-            Rua Tenente Queiroz, 594 — Antônio Bezerra, Fortaleza, CE
-          </p>
-          <div class="map-frame">
-            <iframe src="https://www.google.com/maps?q=Rua+Tenente+Queiroz,+594,+Antônio+Bezerra,+Fortaleza,+CE&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de localização do Studio Lina"></iframe>
-          </div>
-          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Rua+Tenente+Queiroz,+594,+Antônio+Bezerra,+Fortaleza,+CE" target="_blank" rel="noopener">Traçar rota</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ INSTAGRAM ============ -->
-  <section class="insta">
-    <div class="wrap">
-      <div class="section-head center">
-        <div class="eyebrow"><span>Siga o Studio Lina</span></div>
-        <h2 class="blur-reveal">Inspire-se no nosso Instagram</h2>
-      </div>
-      <a class="insta-handle" href="https://www.instagram.com/depilacao_studiolina/" target="_blank" rel="noopener">
-        <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.22-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.02-3.58.07-4.85C2.38 3.9 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg></span>
-        @depilacao_studiolina
-      </a>
-      <div class="insta-grid">
-        <div class="insta-tile"><img src="assets/img/salao-lounge.jpg" alt="Foto do Studio Lina no Instagram" loading="lazy"></div>
-        <div class="insta-tile"><img src="assets/img/sala-tratamento.jpg" alt="Foto do Studio Lina no Instagram" loading="lazy"></div>
-        <div class="insta-tile ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></div>
-      </div>
-      <a class="btn btn-dark" href="https://www.instagram.com/depilacao_studiolina/" target="_blank" rel="noopener">Seguir no Instagram</a>
     </div>
   </section>
 
@@ -750,10 +728,11 @@
       </div>
       <div class="footer-col">
         <h4>Navegação</h4>
-        <a href="#sobre">Sobre</a>
         <a href="#servicos">Serviços</a>
         <a href="#galeria">Galeria</a>
+        <a href="#sobre">Sobre</a>
         <a href="#depoimentos">Depoimentos</a>
+        <a href="#curso">Curso</a>
       </div>
       <div class="footer-col">
         <h4>Contato</h4>
