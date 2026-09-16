@@ -8,23 +8,80 @@
     return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + text;
   }
 
-  // ---------- WhatsApp CTAs (header, hero, serviços, footer flutuante) ----------
+  // ---------- Tracking (preparado para GTM/dataLayer e Meta Pixel) ----------
+  // Não gera erro se GTM/Pixel ainda não estiverem instalados nesta página.
+  function trackEvent(eventName, params) {
+    try {
+      if (window.dataLayer && typeof window.dataLayer.push === "function") {
+        window.dataLayer.push(Object.assign({ event: eventName }, params || {}));
+      }
+    } catch (e) {}
+    try {
+      if (typeof window.fbq === "function") {
+        window.fbq("track", "Lead", params || {});
+      }
+    } catch (e) {}
+  }
+
+  // ---------- WhatsApp CTAs (header, hero, serviços, curso, footer flutuante) ----------
   function wireWhatsappButtons() {
     var buttons = document.querySelectorAll(".wa-cta");
     buttons.forEach(function (btn) {
-      var isServiceCard = btn.classList.contains("service-card");
+      var isServiceCard = btn.classList.contains("service-card") || btn.classList.contains("price-row") || btn.classList.contains("tier");
       var handler = function (e) {
         e.preventDefault();
         var service = btn.getAttribute("data-service");
         var message = service
           ? "Olá! Gostaria de agendar o serviço de *" + service + "* no Studio Lina 💛"
           : btn.getAttribute("data-wa-message");
+        trackEvent("cta_click", { cta_label: btn.getAttribute("data-track-label") || service || "whatsapp" });
         window.open(buildWaLink(message), "_blank", "noopener");
       };
       btn.addEventListener("click", handler);
       if (isServiceCard) {
         btn.setAttribute("type", "button");
       }
+    });
+  }
+
+  // ---------- Formulário simples do curso → WhatsApp ----------
+  function wireLeadForm() {
+    var form = document.getElementById("leadForm");
+    if (!form) return;
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var nameInput = document.getElementById("leadName");
+      var name = (nameInput && nameInput.value || "").trim();
+      var message = name
+        ? "Olá! Meu nome é " + name + " e tenho interesse no Curso Profissional de Depilação do Studio Lina."
+        : "Olá! Tenho interesse no Curso Profissional de Depilação do Studio Lina 💛";
+      trackEvent("cta_click", { cta_label: "lead_form" });
+      trackEvent("generate_lead", { form: "curso-depilacao" });
+      window.open(buildWaLink(message), "_blank", "noopener");
+    });
+  }
+
+  // ---------- FAQ (acordeão) ----------
+  function wireFaq() {
+    var items = document.querySelectorAll(".faq-item");
+    if (!items.length) return;
+    items.forEach(function (item) {
+      var q = item.querySelector(".faq-q");
+      var a = item.querySelector(".faq-a");
+      if (!q || !a) return;
+      q.addEventListener("click", function () {
+        var isOpen = item.classList.contains("open");
+        items.forEach(function (other) {
+          other.classList.remove("open");
+          other.querySelector(".faq-a").style.maxHeight = null;
+          other.querySelector(".faq-q").setAttribute("aria-expanded", "false");
+        });
+        if (!isOpen) {
+          item.classList.add("open");
+          a.style.maxHeight = a.scrollHeight + "px";
+          q.setAttribute("aria-expanded", "true");
+        }
+      });
     });
   }
 
@@ -175,6 +232,8 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     wireWhatsappButtons();
+    wireLeadForm();
+    wireFaq();
     wireHeaderScroll();
     wireMobileNav();
     wireServiceTabs();
