@@ -475,6 +475,55 @@ body.nav-open .nav-overlay{ opacity:1; pointer-events:auto; }
 
 .services-note{ margin-top:32px; font-size:13.5px; color:var(--text-muted); text-align:center; }
 
+.services-subhead{
+  display:flex; align-items:center; gap:16px; margin:48px 0 26px;
+  font-family:var(--font-display); font-size:20px; color:var(--text); font-weight:600;
+}
+.services-subhead::after{ content:""; flex:1; height:1px; background:var(--border); }
+
+.price-list{ columns:2; column-gap:48px; }
+@media (max-width:720px){ .price-list{ columns:1; } }
+.price-list-group{ break-inside:avoid; margin-bottom:22px; }
+.price-list-title{
+  font-family:var(--font-display); font-weight:600; font-size:15.5px; color:var(--accent-text);
+  margin:0 0 6px; padding-bottom:8px; border-bottom:1px solid var(--border);
+}
+.price-row{
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  width:100%; padding:10px 6px; border-radius:8px; text-align:left;
+  border-bottom:1px dashed var(--border); transition:background-color .25s var(--ease), padding-left .25s var(--ease);
+}
+.price-row:last-child{ border-bottom:none; }
+.price-row:hover{ background:var(--bg-alt); padding-left:12px; }
+.price-row .name{ font-size:14.5px; color:var(--text-soft); }
+.price-row .price{ font-weight:600; color:var(--accent-text); font-size:14px; white-space:nowrap; }
+.price-row:focus-visible{ outline:2px solid var(--gold); outline-offset:-2px; }
+
+.package-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+@media (max-width:720px){ .package-grid{ grid-template-columns:1fr; } }
+.package-card{
+  background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-md);
+  padding:22px 24px; transition:transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease), background-color .5s var(--ease);
+}
+.package-card:hover{ transform:translateY(-4px); box-shadow:var(--shadow-card); border-color:var(--gold-light); }
+.package-head{ display:flex; align-items:center; gap:10px; margin-bottom:16px; }
+.package-icon{ font-size:19px; line-height:1; }
+.package-head h4{ font-family:var(--font-display); font-size:16.5px; margin:0; font-weight:600; }
+.package-tiers{ display:flex; flex-wrap:wrap; gap:8px; }
+.tier{
+  display:flex; flex-direction:column; align-items:center; gap:3px;
+  padding:10px 12px; border-radius:10px; background:var(--bg-alt); border:1px solid transparent;
+  font-size:12px; color:var(--text-muted); transition:all .25s var(--ease); flex:1; min-width:86px;
+}
+.tier strong{ font-size:14.5px; color:var(--accent-text); font-weight:700; }
+.tier:hover{
+  background:linear-gradient(135deg,var(--gold-light),var(--gold-dark)); color:#1c1509; border-color:transparent;
+  transform:translateY(-2px); box-shadow:inset 0 1px 0 rgba(255,255,255,.5);
+}
+.tier:hover strong{ color:#1c1509; }
+.tier:focus-visible{ outline:2px solid var(--gold); outline-offset:2px; }
+.package-note{ margin-top:28px; text-align:center; font-size:13.5px; color:var(--text-muted); font-style:italic; }
+
 /* ===========================================================
    FEATURES
    =========================================================== */
@@ -587,6 +636,18 @@ body.nav-open .nav-overlay{ opacity:1; pointer-events:auto; }
 .hours-list .day{ font-weight:600; }
 .hours-list .status-closed{ color:#a24545; }
 .hours-list .status-open{ color:var(--accent-text); }
+
+.payment-methods{ padding-top:4px; }
+.payment-methods-label{
+  display:block; font-size:11.5px; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--text-muted); margin-bottom:10px;
+}
+.payment-badges{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:8px; }
+.payment-badge{
+  padding:6px 14px; border-radius:999px; background:var(--bg-alt); border:1px solid var(--border);
+  font-size:12.5px; font-weight:600; color:var(--text-soft);
+}
+.payment-note-small{ font-size:11.5px; color:var(--text-muted); font-style:italic; }
 
 .location-address{ font-size:15px; }
 .location-address strong{ display:block; font-family:var(--font-display); font-size:18px; margin-bottom:6px; }
