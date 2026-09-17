@@ -401,6 +401,10 @@ body.nav-open .nav-overlay{ opacity:1; pointer-events:auto; }
    ABOUT
    =========================================================== */
 .about-grid{ display:grid; grid-template-columns:.85fr 1.15fr; gap:64px; align-items:center; }
+@media (max-width:900px){
+  .about-grid{ grid-template-columns:1fr; gap:40px; }
+  .about-media{ max-width:400px; margin:0 auto; }
+}
 .about-media{ position:relative; }
 .about-media .frame{
   position:relative; border-radius:var(--radius-lg); overflow:hidden; aspect-ratio:3/4;
