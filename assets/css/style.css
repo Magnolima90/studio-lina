@@ -371,16 +371,16 @@ body.nav-open .nav-overlay{ opacity:1; pointer-events:auto; }
 @media (max-width:900px){
   .hero-grid{ grid-template-columns:1fr; padding-bottom:70px; }
   .hero{ padding-top:110px; }
-  .hero-visual{ max-width:340px; margin:0 auto; }
+  .hero-visual{ max-width:380px; margin:0 auto; order:-1; }
 }
 
-/* Mobile: hero mais compacto (~75vh), fonte reduzida, CTA sempre visível sem rolar */
+/* Mobile: foto em destaque no topo, depois o texto; hero mais compacto (~75vh) */
 @media (max-width:767px){
   .hero{ min-height:75vh; padding-top:96px; }
-  .hero-grid{ gap:28px; padding-bottom:32px; }
+  .hero-grid{ gap:24px; padding-bottom:32px; }
   .hero h1{ font-size:clamp(28px,8.5vw,38px); max-width:none; }
   .hero .lead{ font-size:15px; line-height:1.5; margin-bottom:22px; }
-  .hero-visual{ max-width:220px; }
+  .hero-visual{ max-width:280px; }
   .hero-scroll{ display:none; }
 }
 
