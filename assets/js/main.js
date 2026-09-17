@@ -44,6 +44,37 @@
     });
   }
 
+  // ---------- Botão flutuante do WhatsApp: mensagem varia conforme a seção visível ----------
+  function wireContextualWhatsapp() {
+    var floatBtn = document.querySelector(".wa-float");
+    if (!floatBtn || !("IntersectionObserver" in window)) return;
+
+    var messages = {
+      areas: "Olá! Gostaria de agendar depilação no Studio Lina 💛",
+      servicos: "Olá! Gostaria de saber mais sobre os serviços do Studio Lina 💛",
+      sobre: "Olá! Gostaria de agendar um horário no Studio Lina 💛",
+      localizacao: "Olá! Gostaria de confirmar o horário e a localização do Studio Lina.",
+      depoimentos: "Olá! Gostaria de agendar um horário no Studio Lina 💛",
+      curso: "Olá! Quero saber mais sobre o Curso Profissional de Depilação do Studio Lina 💛"
+    };
+    var defaultMessage = floatBtn.getAttribute("data-wa-message");
+
+    var sections = Object.keys(messages)
+      .map(function (id) { return document.getElementById(id); })
+      .filter(Boolean);
+    if (!sections.length) return;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          floatBtn.setAttribute("data-wa-message", messages[entry.target.id] || defaultMessage);
+        }
+      });
+    }, { rootMargin: "-40% 0px -40% 0px" });
+
+    sections.forEach(function (el) { observer.observe(el); });
+  }
+
   // ---------- Formulário simples do curso → WhatsApp ----------
   function wireLeadForm() {
     var form = document.getElementById("leadForm");
@@ -61,32 +92,11 @@
     });
   }
 
-  // ---------- "Saiba mais" do curso (expande sem sair da página) ----------
-  function wireCourseMore() {
-    var toggle = document.getElementById("courseMoreToggle");
-    var details = document.getElementById("courseDetails");
-    if (!toggle || !details) return;
-    var label = toggle.querySelector(".label");
 
-    toggle.addEventListener("click", function () {
-      var isOpen = toggle.getAttribute("aria-expanded") === "true";
-      if (isOpen) {
-        details.style.maxHeight = null;
-        toggle.setAttribute("aria-expanded", "false");
-        if (label) label.textContent = "Saiba mais";
-      } else {
-        details.style.maxHeight = details.scrollHeight + "px";
-        toggle.setAttribute("aria-expanded", "true");
-        if (label) label.textContent = "Ver menos";
-      }
-    });
-  }
-
-  // ---------- Accordion de preços avulsos (fechado no mobile, aberto no desktop) ----------
+  // ---------- Accordion de preços avulsos (fechado por padrão, em qualquer tela) ----------
   function wirePriceAccordion() {
     var groups = document.querySelectorAll(".price-list-group");
     if (!groups.length) return;
-    var isMobile = window.matchMedia("(max-width: 720px)").matches;
 
     groups.forEach(function (group) {
       var toggle = group.querySelector(".price-list-toggle");
@@ -99,7 +109,7 @@
         body.style.maxHeight = open ? body.scrollHeight + "px" : null;
       };
 
-      setOpen(!isMobile);
+      setOpen(false);
 
       toggle.addEventListener("click", function () {
         setOpen(!group.classList.contains("open"));
@@ -164,6 +174,32 @@
         document.querySelectorAll(".service-panel").forEach(function (panel) {
           panel.classList.toggle("active", panel.id === "panel-" + target);
         });
+      });
+    });
+  }
+
+  // ---------- Accordion de categorias (mobile): cada categoria abre/fecha independente ----------
+  function wireCategoryAccordion() {
+    var toggles = document.querySelectorAll(".category-toggle");
+    if (!toggles.length) return;
+
+    toggles.forEach(function (toggle) {
+      var body = toggle.nextElementSibling;
+      if (!body || !body.classList.contains("service-panel-body")) return;
+
+      toggle.addEventListener("click", function () {
+        var isOpen = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", isOpen ? "false" : "true");
+        body.style.maxHeight = isOpen ? null : body.scrollHeight + "px";
+      });
+    });
+
+    window.addEventListener("resize", function () {
+      toggles.forEach(function (toggle) {
+        var body = toggle.nextElementSibling;
+        if (body && toggle.getAttribute("aria-expanded") === "true") {
+          body.style.maxHeight = body.scrollHeight + "px";
+        }
       });
     });
   }
@@ -254,12 +290,13 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     wireWhatsappButtons();
+    wireContextualWhatsapp();
     wireLeadForm();
-    wireCourseMore();
     wirePriceAccordion();
     wireHeaderScroll();
     wireMobileNav();
     wireServiceTabs();
+    wireCategoryAccordion();
     wireGalleryLightbox();
     wireRevealOnScroll();
     wireThemeToggle();
