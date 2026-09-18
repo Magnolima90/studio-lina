@@ -375,8 +375,8 @@ body.nav-open .nav-overlay{ opacity:1; pointer-events:auto; }
   .hero-grid{ gap:24px; padding-bottom:32px; padding-top:96px; }
   .hero h1{ font-size:clamp(28px,8.5vw,38px); max-width:none; }
   .hero .lead{ font-size:15px; line-height:1.5; margin-bottom:22px; }
-  .hero-visual{ max-width:none; margin:0 -14px; order:-1; }
-  .hero-frame{ max-width:none; border-radius:0 0 var(--radius-md) var(--radius-md); }
+  .hero-visual{ max-width:300px; margin:0 auto; order:-1; }
+  .hero-frame{ max-width:none; }
   .hero-scroll{ display:none; }
 }
 
